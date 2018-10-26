@@ -1,6 +1,6 @@
 {
   "name": "windows-service-operations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An npm package to Start/Stop IIS",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/francisminu/IISRESET-npm-package/issues"
   },
