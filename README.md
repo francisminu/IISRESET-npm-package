@@ -1,6 +1,8 @@
-# Perform IIS Operations
-
-A node module that can be used to Start/Stop sites on IIS without having to run it as admin (the module takes care of that).
+# windows-service-operations
+An npm package to perform various operations like:
+Start IIS site
+Stop IIS site
+The package executes the required commands as Admin and therefore, users do not have to launch it in Administrator mode.
 
 ## Getting Started
 
@@ -14,19 +16,18 @@ A node module that can be used to Start/Stop sites on IIS without having to run 
 
 npm i windows-service-operations
 
+## Usage
+
 Once installed using npm, require the module in the file
 
 var serviceOperations = require('windows-service-operations');
-
-
-## Usage
 
 Call the performIISOperations to Start/Stop a site on IIS.
 
 The format of data to be passed is as follows:
 
 let data = {
-        "action": "stop",
+        "action": "", -- the values expected are: start/stop
         "username": "",
         "password": "",
         "serverIpAddress": "",
@@ -38,3 +39,4 @@ Now, make a call to the method performIISOperations inside the package as given 
 serviceOperations.performIISOperations(data,() => {
 	console.log('Requested operation has been completed';
 });
+
