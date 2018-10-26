@@ -1,5 +1,5 @@
 {
-  "name": "iisreset",
+  "name": "windows-service-operations",
   "version": "1.0.0",
   "description": "An npm package to Start/Stop IIS",
   "main": "index.js",
@@ -17,9 +17,5 @@
     "url": "https://github.com/francisminu/IISRESET-npm-package/issues"
   },
   "homepage": "https://github.com/francisminu/IISRESET-npm-package#readme",
-  "dependencies": {
-    "iis": "^0.2.0",
-    "iis-reset": "^1.0.0",
-    "run-gulp-task": "^0.2.0"
-  }
+  "dependencies": {}
 }
