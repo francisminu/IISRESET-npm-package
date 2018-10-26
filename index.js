@@ -1,6 +1,6 @@
 const exec = require("child_process").exec;
 
-performIISOperations = (data, callback) => {
+exports.performIISOperations = (data, callback) => {
     if (data.action == 'start') {
         exec("Powershell.exe  -executionpolicy remotesigned . " + __dirname + "\\actions.ps1; Start-IIS-Site -username " + data.username + " -password " + data.password + " -serverIpAddress " + data.serverIpAddress + " -siteName " + data.siteName , function(err, stdout, stderr){
             console.log(stdout); 
@@ -14,16 +14,7 @@ performIISOperations = (data, callback) => {
          });
     }
 }
-var data = {
-    "action": "stop",
-    "username": "ohl\\aa-mfrancis",
-    "password": "2427Kj3tkipy!@",
-    "serverIpAddress": "10.202.70.97",
-    "siteName": "TicketingSystemDevApi"
-};
-performIISOperations(data, () => {
-    console.log('The requested operation has been completed.');
-});
+
 
 // performIISOperations(data, () => {
 //     console.log('Done with the action!!!!!');
