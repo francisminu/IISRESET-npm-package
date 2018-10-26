@@ -26,13 +26,13 @@ Call the performIISOperations to Start/Stop a site on IIS.
 
 The format of data to be passed is as follows:
 
-let data = {
+     let data = {
         "action": "", -- the values expected are: start/stop
         "username": "",
         "password": "",
         "serverIpAddress": "",
         "siteName": ""
-    };
+      };
 
 Now, make a call to the method performIISOperations inside the package as given below:
 
