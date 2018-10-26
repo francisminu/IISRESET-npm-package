@@ -1,4 +1,3 @@
-const runGulpTask = require('run-gulp-task');
 const exec = require("child_process").exec;
 
 exports.performIISOperations = (data, callback) => {
