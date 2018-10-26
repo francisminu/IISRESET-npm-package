@@ -1,6 +1,6 @@
 {
   "name": "windows-server-admin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An npm package to perform various operations in a remote windows server with admin rights.",
   "main": "index.js",
   "scripts": {

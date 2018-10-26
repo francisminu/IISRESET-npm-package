@@ -19,7 +19,7 @@ exports.performWindowsServiceOperations = (data, callback) => {
     if (data.action == 'start') {
         exec("cmdkey.exe /add:" + data.serverIpAddress + " /user:" + data.username + " /pass:" + data.password, () => {
             console.log('Starting service: ', data.name);
-            exec("PsExec64.exe -s \\\\" + data.serverIpAddress + " -u " + data.username + " -p " + data.password + " c:\\windows\\system32\\sc start " + data.name, () => {
+            exec(__dirname + "\\PsExec64.exe -s \\\\" + data.serverIpAddress + " -u " + data.username + " -p " + data.password + " c:\\windows\\system32\\sc start " + data.name, () => {
                 console.log('Started service: ', data.name);
                 exec("cmdkey.exe /delete:" + data.serverIpAddress + " /user:" + data.username + " /pass:" + data.password, () => {
                     console.log('Completed the requested operation.');
@@ -30,7 +30,7 @@ exports.performWindowsServiceOperations = (data, callback) => {
     } else {
         exec("cmdkey.exe /add:" + data.serverIpAddress + " /user:" + data.username + " /pass:" + data.password, () => {
             console.log('Stopping service: ', data.name);
-            exec("PsExec64.exe -s \\\\" + data.serverIpAddress + " -u " + data.username + " -p " + data.password + " c:\\windows\\system32\\sc stop " + data.name, () => {
+            exec(__dirname + "\\PsExec64.exe -s \\\\" + data.serverIpAddress + " -u " + data.username + " -p " + data.password + " c:\\windows\\system32\\sc stop " + data.name, () => {
                 console.log('Stopped service: ', data.name);
                 exec("cmdkey.exe /delete:" + data.serverIpAddress + " /user:" + data.username + " /pass:" + data.password, () => {
                     console.log('Completed the requested operation.');
