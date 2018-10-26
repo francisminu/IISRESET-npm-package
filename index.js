@@ -8,7 +8,7 @@ exports.performIISOperations = (data, callback) => {
          });
     }
     else if (data.action == 'stop') {
-        exec("Powershell.exe  -executionpolicy remotesigned . " + __dirname + "\\actions.ps1; Start-IIS-Site -username " + data.username + " -password " + data.password + " -serverIpAddress " + data.serverIpAddress + " -siteName " + data.siteName , function(err, stdout, stderr){
+        exec("Powershell.exe  -executionpolicy remotesigned . " + __dirname + "\\actions.ps1; Stop-IIS-Site -username " + data.username + " -password " + data.password + " -serverIpAddress " + data.serverIpAddress + " -siteName " + data.siteName , function(err, stdout, stderr){
             console.log(stdout); 
             callback(err)
          });
