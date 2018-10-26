@@ -26,7 +26,7 @@ Call the performIISOperations to Start/Stop a site on IIS.
 
 The format of data to be passed is as follows:
 
-let data = {
+    let data = {
         "action": "", -- the values expected are: start/stop
         "username": "",
         "password": "",

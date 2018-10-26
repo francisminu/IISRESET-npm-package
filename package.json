@@ -1,6 +1,6 @@
 {
   "name": "windows-service-operations",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "An npm package to Start/Stop IIS",
   "main": "index.js",
   "scripts": {
