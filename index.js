@@ -23,6 +23,7 @@ exports.performWindowsServiceOperations = (data, callback) => {
                 console.log('Started service: ', data.name);
                 exec("cmdkey.exe /delete:" + data.serverIpAddress + " /user:" + data.username + " /pass:" + data.password, () => {
                     console.log('Completed the requested operation.');
+                    callback();
                 });
             });
         });
@@ -33,6 +34,7 @@ exports.performWindowsServiceOperations = (data, callback) => {
                 console.log('Stopped service: ', data.name);
                 exec("cmdkey.exe /delete:" + data.serverIpAddress + " /user:" + data.username + " /pass:" + data.password, () => {
                     console.log('Completed the requested operation.');
+                    callback();
                 });
             });
         });
