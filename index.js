@@ -1,20 +1,29 @@
 const exec = require("child_process").exec;
 
-exports.performIISOperations = (data, callback) => {
+performIISOperations = (data, callback) => {
     if (data.action == 'start') {
-        exec("Powershell.exe  -executionpolicy remotesigned . .\\iisactions.ps1; Start-IIS-Site -username " + data.username + " -password " + data.password + " -serverIpAddress " + data.serverIpAddress + " -siteName " + data.siteName , function(err, stdout, stderr){
+        exec("Powershell.exe  -executionpolicy remotesigned . " + __dirname + "\\actions.ps1; Start-IIS-Site -username " + data.username + " -password " + data.password + " -serverIpAddress " + data.serverIpAddress + " -siteName " + data.siteName , function(err, stdout, stderr){
             console.log(stdout); 
             callback(err)
          });
     }
     else if (data.action == 'stop') {
-        console.log(data.action);
-        exec("Powershell.exe  -executionpolicy remotesigned . .\\iisactions.ps1; Stop-IIS-Site -username " + data.username + " -password " + data.password + " -serverIpAddress " + data.serverIpAddress + " -siteName " + data.siteName , function(err, stdout, stderr){
+        exec("Powershell.exe  -executionpolicy remotesigned . " + __dirname + "\\actions.ps1; Start-IIS-Site -username " + data.username + " -password " + data.password + " -serverIpAddress " + data.serverIpAddress + " -siteName " + data.siteName , function(err, stdout, stderr){
             console.log(stdout); 
             callback(err)
          });
     }
 }
+var data = {
+    "action": "stop",
+    "username": "ohl\\aa-mfrancis",
+    "password": "2427Kj3tkipy!@",
+    "serverIpAddress": "10.202.70.97",
+    "siteName": "TicketingSystemDevApi"
+};
+performIISOperations(data, () => {
+    console.log('The requested operation has been completed.');
+});
 
 // performIISOperations(data, () => {
 //     console.log('Done with the action!!!!!');
