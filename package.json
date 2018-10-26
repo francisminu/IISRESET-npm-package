@@ -1,7 +1,7 @@
 {
-  "name": "windows-service-operations",
-  "version": "1.0.9",
-  "description": "An npm package to Start/Stop IIS",
+  "name": "windows-server-admin",
+  "version": "1.0.0",
+  "description": "An npm package to perform various operations in a remote windows server with admin rights.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/francisminu/IISRESET-npm-package.git"
   },
-  "keywords": [],
+  "keywords": ["iis","iis start site","windows service start/stop","iisreset","sc","windows service"],
   "author": "",
   "license": "MIT",
   "bugs": {
