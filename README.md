@@ -1,5 +1,7 @@
-# IISRESET-npm-package
-An npm package to start/stop IIS.
+# windows-service-operations
+An npm package to perform various operations like:
+Start IIS site
+Stop IIS site
 
 # Perform IIS Operations
 
