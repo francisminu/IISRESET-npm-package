@@ -17,13 +17,9 @@
     "url": "https://github.com/francisminu/IISRESET-npm-package/issues"
   },
   "homepage": "https://github.com/francisminu/IISRESET-npm-package#readme",
-  "devDependencies": {
-    "gulp": "latest",
-    "gulp-util": "latest",
-    "gulp-sass": "latest",
-    "gulp-coffee": "latest",
-    "gulp-uglify": "latest",
-    "gulp-concat": "latest",
-    "gulp-connect": "latest"
+  "dependencies": {
+    "iis": "^0.2.0",
+    "iis-reset": "^1.0.0",
+    "run-gulp-task": "^0.2.0"
   }
 }
