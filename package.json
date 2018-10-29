@@ -1,10 +1,10 @@
 {
   "name": "windows-server-admin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "An npm package to perform various operations in a remote windows server with admin rights.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,10 @@
     "iis",
     "iis start site",
     "windows service start/stop",
-    "iisreset",
+    "iisrestart",
+    "windows",
+    "background service",
+    "stop iis site",
     "sc",
     "windows service"
   ],
@@ -24,5 +27,8 @@
     "url": "https://github.com/francisminu/IISRESET-npm-package/issues"
   },
   "homepage": "https://github.com/francisminu/IISRESET-npm-package#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
