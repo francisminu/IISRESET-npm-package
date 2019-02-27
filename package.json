@@ -1,29 +1,41 @@
 {
-  "name": "iisreset",
-  "version": "1.0.0",
-  "description": "An npm package to Start/Stop IIS",
+  "name": "windows-server-admin",
+  "version": "1.0.10",
+  "description": "An npm package to perform various operations in a remote windows server with admin rights.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/francisminu/IISRESET-npm-package.git"
   },
-  "keywords": [],
+  "private": false,
+  "keywords": [
+    "iis",
+    "start",
+    "stop",
+    "windows",
+    "service",
+    "site",
+    "restart",
+    "iis start site",
+    "windows service start/stop",
+    "iisrestart",
+    "windows",
+    "background service",
+    "stop iis site",
+    "sc",
+    "windows service"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/francisminu/IISRESET-npm-package/issues"
   },
   "homepage": "https://github.com/francisminu/IISRESET-npm-package#readme",
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "latest",
-    "gulp-util": "latest",
-    "gulp-sass": "latest",
-    "gulp-coffee": "latest",
-    "gulp-uglify": "latest",
-    "gulp-concat": "latest",
-    "gulp-connect": "latest"
+    "mocha": "^5.2.0"
   }
 }
